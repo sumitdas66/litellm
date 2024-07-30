@@ -185,6 +185,7 @@ spec:
           volumeMounts:
             - name: litellm-config
               mountPath: /etc/litellm/
+              readOnly: false
           {{ if .Values.securityContext.readOnlyRootFilesystem }}
             - name: tmp
               mountPath: /tmp
