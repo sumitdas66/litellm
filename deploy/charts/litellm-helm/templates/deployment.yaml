@@ -210,6 +210,7 @@ spec:
             sizeLimit: 500Mi
         {{- end }}
         - name: litellm-config
+          readOnly: false
           configMap:
             name: {{ include "litellm.fullname" . }}-config
             items:
